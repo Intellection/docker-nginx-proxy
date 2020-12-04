@@ -11,7 +11,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - "./config/app.conf:/etc/nginx/app.conf"
+      - "./example/app.conf:/etc/nginx/app.conf"
     depends_on:
       - app
     networks:
