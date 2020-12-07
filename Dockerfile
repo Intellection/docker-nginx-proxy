@@ -4,22 +4,22 @@ USER root
 
 # Install build dependencies
 RUN  apk add --no-cache \
+      alpine-sdk \
+      bash \
+      findutils \
       gcc \
-      libc-dev \
-      make \
-      openssl-dev \
-      pcre-dev \
-      zlib-dev \
-      linux-headers \
-      libxslt-dev \
       gd-dev \
       geoip-dev \
-      perl-dev \
+      libc-dev \
       libedit-dev \
+      libxslt-dev \
+      linux-headers \
+      make \
       mercurial \
-      bash \
-      alpine-sdk \
-      findutils
+      openssl-dev \
+      pcre-dev \
+      perl-dev \
+      zlib-dev
 
 WORKDIR /usr/src/
 
