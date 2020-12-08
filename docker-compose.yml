@@ -1,0 +1,21 @@
+---
+version: '3.7'
+services:
+  app:
+    image: caddy:2.1.1-alpine
+    networks:
+      - local
+  proxy:
+    image: nginx-proxy:latest
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./example/app.conf:/etc/nginx/app.conf"
+    depends_on:
+      - app
+    networks:
+      - local
+
+networks:
+  local:
