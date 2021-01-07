@@ -56,7 +56,7 @@ server {
 ## Logging
 
 To change how logging is configured, mount a file at `/etc/nginx/log.conf`:
-```nginx 
+```nginx
 access_log off;
 error_log off;
 ```
@@ -73,4 +73,4 @@ It's important to note that overriding this file will remove the current default
 
 ## Health check
 
-A health check is available on port `18080` at `/healthz`.
+A health check is available on port `18081` at `/healthz`.
