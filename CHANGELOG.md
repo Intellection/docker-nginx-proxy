@@ -2,8 +2,7 @@
 
 ## 1.19.5-2
 
-* Forward `X-Forwarded-*` headers to upstream.
-* Forward `Connection` header to upstream.
+* Forward `X-Forwarded-*` headers to upstream correctly.
 
 ## 1.19.5-1
 
