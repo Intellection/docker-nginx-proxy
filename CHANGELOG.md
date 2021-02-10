@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.19.5-4
+
+* Renamed `main` logging format to `main_default`.
+* Remove unnecessary double space between `$time_local` & `$status` from
+  `main_default` logging format.
+* Add `main_json` logging format and configure it on `access_log`.
+
 ## 1.19.5-3
 
 * Set or forward `X-Request-ID`.
