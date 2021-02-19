@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.19.5-5
+
+* Increase `keepalive_timeout` to `450s`.
+* Add `http_connection` to json logging (for Connection header).
+* Fix "incorrect" spelling of header.
+
 ## 1.19.5-4
 
 * Renamed `main` logging format to `main_default`.
