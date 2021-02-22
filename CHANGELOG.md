@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.19.5-6
+
+* Set `client_body_buffer_size` to `128k`.
+* Set `client_header_timeout` to `65s`.
+* Set `client_max_body_size` to `500m`.
+* Set `keepalive_timeout` to `65s`.
+* Set `send_timeout` to `60s`.
+
 ## 1.19.5-5
 
 * Add `http_x_amzn_trace_id` to json logging (for `X-Amzn-Trace-Id` header).
