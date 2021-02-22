@@ -2,6 +2,7 @@
 
 ## 1.19.5-5
 
+* Add `http_x_amzn_trace_id` to json logging (for `X-Amzn-Trace-Id` header).
 * Add `http_connection` to json logging (for `Connection` header).
 * Fix "incorrect" spelling of header.
 
