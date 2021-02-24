@@ -6,7 +6,9 @@
 * Set `client_header_timeout` to `605s`.
 * Set `client_max_body_size` to `500m`.
 * Set `keepalive_timeout` to `605s`.
-* Set `send_timeout` to `60s`.
+* Set `proxy_connect_timeout` to `60s` (same as default).
+* Set `proxy_send_timeout` to `60s` (same as default).
+* Set `send_timeout` to `60s` (same as default).
 
 ## 1.19.5-5
 
