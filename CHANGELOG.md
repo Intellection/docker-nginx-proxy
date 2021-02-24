@@ -3,9 +3,9 @@
 ## 1.19.5-6
 
 * Set `client_body_buffer_size` to `128k`.
-* Set `client_header_timeout` to `65s`.
+* Set `client_header_timeout` to `605s`.
 * Set `client_max_body_size` to `500m`.
-* Set `keepalive_timeout` to `65s`.
+* Set `keepalive_timeout` to `605s`.
 * Set `send_timeout` to `60s`.
 
 ## 1.19.5-5
