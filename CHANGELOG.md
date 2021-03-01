@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.19.5-7
+
+* Set `aio` to `threads`.
+* Set `aio_write` to `on`.
+* Set `tcp_nodelay` to `on`.
+* Reduce `client_body_buffer_size` to `16k` (same as default).
+* Reduce `client_body_timeout` to `60s` (same as default).
+* Reduce `client_header_timeout` to `60s` (same as default).
+* Reduce `keepalive_timeout` to `75s` (same as default).
+* Reduce `proxy_connect_timeout` to `5s`.
+* Reduce `proxy_read_timeout` to `60s` (same as default).
+* Set `Proxy` header to `""` to mitigate httpoxy vulnerability.
+* Set `daemon` to `off`.
+* Set `multi_accept` to `on`.
+* Set `use` to `epoll`.
+* Reduce `worker_shutdown_timeout` to `240s`.
+* Disable keep-alive on healthcheck server.
+
 ## 1.19.5-6
 
 * Set `client_body_buffer_size` to `128k`.
