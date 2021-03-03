@@ -1,5 +1,29 @@
 # Changelog
 
+## 1.19.5-7
+
+* Set `daemon` to `off`.
+* Set `multi_accept` to `on`.
+* Set `use` to `epoll`.
+* Set `aio` to `threads`.
+* Set `aio_write` to `on`.
+* Set `tcp_nodelay` to `on`.
+* Set `reset_timedout_connection` to `on`.
+* Set `port_in_redirect` to `off`.
+* Add `http_upgrade` and `proxy_connection` to log format.
+* Remove setting of `sendfile` (turns it off).
+* Remove setting of `client_max_body_size` (defaults to `1m`).
+* Remove setting of `client_body_buffer_size` (defaults to `16k`).
+* Reduce `client_body_timeout` to `60s` (same as default).
+* Reduce `client_header_timeout` to `60s` (same as default).
+* Reduce `keepalive_timeout` to `75s` (same as default).
+* Reduce `proxy_connect_timeout` to `5s`.
+* Reduce `proxy_read_timeout` to `60s` (same as default).
+* Reduce `worker_shutdown_timeout` to `240s`.
+* Set `Proxy` header to `""` to mitigate httpoxy vulnerability.
+* Disable keep-alive on healthcheck server.
+* Enable support for websockets.
+
 ## 1.19.5-6
 
 * Set `client_body_buffer_size` to `128k`.
