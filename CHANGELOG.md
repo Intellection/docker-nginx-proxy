@@ -10,6 +10,7 @@
 * Set `tcp_nodelay` to `on`.
 * Set `reset_timedout_connection` to `on`.
 * Set `port_in_redirect` to `off`.
+* Add `http_upgrade` and `proxy_connection` to log format.
 * Remove setting of `sendfile` (turns it off).
 * Remove setting of `client_max_body_size` (defaults to `1m`).
 * Remove setting of `client_body_buffer_size` (defaults to `16k`).
