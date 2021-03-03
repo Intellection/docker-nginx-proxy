@@ -58,3 +58,5 @@ COPY ./config/ /etc/nginx/
 STOPSIGNAL SIGQUIT
 EXPOSE 8080
 USER nginx:nginx
+
+CMD ["nginx"]
