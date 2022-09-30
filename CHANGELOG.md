@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.19.5-8
+
+* Allow passing through `X-Forwarded-Host` header if it's set.
+
 ## 1.19.5-7
 
 * Set `daemon` to `off`.
