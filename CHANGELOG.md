@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.23.3
+
+* Upgrade nginx to 1.23.3.
+* Upgrade headers-more to 0.34.
+
 ## 1.19.5-8
 
 * Allow passing through `X-Forwarded-Host` header if it's set.

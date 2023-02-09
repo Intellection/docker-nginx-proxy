@@ -1,4 +1,4 @@
-FROM zappi/nginx:1.19.5 as builder
+FROM zappi/nginx:1.23.3 as builder
 
 USER root
 
@@ -24,18 +24,18 @@ RUN  apk add --no-cache \
 WORKDIR /usr/src/
 
 # Download nginx source
-ARG NGINX_VERSION="1.19.5"
+ARG NGINX_VERSION="1.23.3"
 ARG NGINX_PKG="nginx-${NGINX_VERSION}.tar.gz"
-ARG NGINX_SHA="5c0a46afd6c452d4443f6ec0767f4d5c3e7c499e55a60cd6542b35a61eda799c"
+ARG NGINX_SHA="75cb5787dbb9fae18b14810f91cc4343f64ce4c24e27302136fb52498042ba54"
 
 RUN wget "http://nginx.org/download/${NGINX_PKG}" && \
     echo "${NGINX_SHA} *${NGINX_PKG}" | sha256sum -c - && \
     tar --no-same-owner -xzf ${NGINX_PKG} --one-top-level=nginx --strip-components=1
 
 # Download headers-more module source
-ARG HEADERS_MORE_VERSION="0.33"
+ARG HEADERS_MORE_VERSION="0.34"
 ARG HEADERS_MORE_PKG="v${HEADERS_MORE_VERSION}.tar.gz"
-ARG HEADERS_MORE_SHA="a3dcbab117a9c103bc1ea5200fc00a7b7d2af97ff7fd525f16f8ac2632e30fbf"
+ARG HEADERS_MORE_SHA="0c0d2ced2ce895b3f45eb2b230cd90508ab2a773299f153de14a43e44c1209b3"
 
 RUN wget "https://github.com/openresty/headers-more-nginx-module/archive/${HEADERS_MORE_PKG}" && \
     echo "${HEADERS_MORE_SHA} *${HEADERS_MORE_PKG}" | sha256sum -c - && \
@@ -48,7 +48,7 @@ RUN cd nginx && \
     make modules
 
 # Production container starts here
-FROM zappi/nginx:1.19.5
+FROM zappi/nginx:1.23.3
 
 # Copy compiled module
 COPY --from=builder /usr/src/nginx/objs/*_module.so /etc/nginx/modules/
