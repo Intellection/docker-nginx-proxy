@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.23.3-1
+
+* Enable gzip compression globally.
+
 ## 1.23.3
 
 * Upgrade nginx to 1.23.3.
