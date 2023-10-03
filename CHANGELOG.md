@@ -1,12 +1,17 @@
 # Changelog
 
+## 1.25.2
+
+* Upgrade to Nginx 1.25.2.
+* Upgrade to Alpine v3.18.
+
 ## 1.23.3-1
 
 * Enable gzip compression globally.
 
 ## 1.23.3
 
-* Upgrade nginx to 1.23.3.
+* Upgrade Nginx to 1.23.3.
 * Upgrade headers-more to 0.34.
 
 ## 1.19.5-8
