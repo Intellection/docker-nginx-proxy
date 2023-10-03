@@ -3,7 +3,7 @@
 ## 1.25.2
 
 * Upgrade to Nginx 1.25.2.
-* Upgrade to Alpine v3.18.
+* Upgrade to Alpine 3.18.
 
 ## 1.23.3-1
 
