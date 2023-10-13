@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.25.2-2
+
+* Add `X-Proxy-Backend` latency headers.
+* Remove incorrect `X-Server-Proxy-Time` configuration.
+
 ## 1.25.2-1
 
 * Expose `$request_time` as `X-Server-Proxy-Time` response header.
