@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.25.2-1
+
+* Expose `$request_time` as `X-Server-Proxy-Time` response header.
+
 ## 1.25.2
 
 * Upgrade to Nginx 1.25.2.
