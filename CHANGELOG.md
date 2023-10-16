@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.25.2-3
+
+* Log `X-Proxy-Backend` latency headers.
+
 ## 1.25.2-2
 
 * Add `X-Proxy-Backend` latency headers.
