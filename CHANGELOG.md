@@ -4,6 +4,13 @@
 
 * Use `zappi/nginx:1.25.3` as the docker base image.
 * Upgrade `headers-more-nginx-module` to `v0.37`.
+* Update latency headers:
+  * Add `X-Proxy-Request-Time`.
+  * Add `X-Proxy-Backend-Response-Time`.
+  * Remove `X-Proxy-Backend-Total-Time`.
+* Update logging fields:
+  * Remove `http_x_proxy_backend_total_time`.
+  * Remove `http_x_proxy_backend_response_time`.
 
 ## 1.25.2-3
 
