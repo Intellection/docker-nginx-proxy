@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.25.3
+
+* Use `zappi/nginx:1.25.3` as the docker base image.
+* Upgrade `headers-more-nginx-module` to `v0.37`.
+
 ## 1.25.2-3
 
 * Log `X-Proxy-Backend` latency headers.
