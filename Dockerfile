@@ -2,24 +2,15 @@ FROM zappi/nginx:1.25.3 as builder
 
 USER root
 
-# Install build dependencies
-RUN  apk add --no-cache \
-      alpine-sdk \
-      bash \
-      findutils \
-      gcc \
-      gd-dev \
-      geoip-dev \
-      libc-dev \
-      libedit-dev \
-      libxslt-dev \
-      linux-headers \
-      make \
-      mercurial \
-      openssl-dev \
-      pcre-dev \
-      perl-dev \
-      zlib-dev
+RUN apt-get update -y && \
+    apt-get install --no-install-recommends -y \
+      build-essential \
+      ca-certificates \
+      libpcre3 \
+      libpcre3-dev \
+      wget \
+      zlib1g \
+      zlib1g-dev
 
 WORKDIR /usr/src/
 
@@ -43,8 +34,7 @@ RUN wget "https://github.com/openresty/headers-more-nginx-module/archive/${HEADE
 
 # Compile nginx with headers-more module using original configure arguments
 RUN cd nginx && \
-    CONFIGURATION_ARGUMENTS=$(nginx -V 2>&1 | sed -n -e 's/^.*arguments: //p') && \
-    sh -c "./configure --with-compat ${CONFIGURATION_ARGUMENTS} --add-dynamic-module=/usr/src/headers-more" && \
+    ./configure --with-compat --add-dynamic-module=/usr/src/headers-more && \
     make modules
 
 # Production container starts here
