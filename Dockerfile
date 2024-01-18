@@ -33,9 +33,9 @@ RUN wget "http://nginx.org/download/${NGINX_PKG}" && \
     tar --no-same-owner -xzf ${NGINX_PKG} --one-top-level=nginx --strip-components=1
 
 # Download headers-more module source
-ARG HEADERS_MORE_VERSION="0.34"
+ARG HEADERS_MORE_VERSION="0.37"
 ARG HEADERS_MORE_PKG="v${HEADERS_MORE_VERSION}.tar.gz"
-ARG HEADERS_MORE_SHA="0c0d2ced2ce895b3f45eb2b230cd90508ab2a773299f153de14a43e44c1209b3"
+ARG HEADERS_MORE_SHA="cf6e169d6b350c06d0c730b0eaf4973394026ad40094cddd3b3a5b346577019d"
 
 RUN wget "https://github.com/openresty/headers-more-nginx-module/archive/${HEADERS_MORE_PKG}" && \
     echo "${HEADERS_MORE_SHA} *${HEADERS_MORE_PKG}" | sha256sum -c - && \
