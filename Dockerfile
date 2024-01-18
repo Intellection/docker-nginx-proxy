@@ -1,4 +1,4 @@
-FROM zappi/nginx:1.25.2 as builder
+FROM zappi/nginx:1.25.3 as builder
 
 USER root
 
@@ -24,9 +24,9 @@ RUN  apk add --no-cache \
 WORKDIR /usr/src/
 
 # Download nginx source
-ARG NGINX_VERSION="1.25.2"
+ARG NGINX_VERSION="1.25.3"
 ARG NGINX_PKG="nginx-${NGINX_VERSION}.tar.gz"
-ARG NGINX_SHA="05dd6d9356d66a74e61035f2a42162f8c754c97cf1ba64e7a801ba158d6c0711"
+ARG NGINX_SHA="64c5b975ca287939e828303fa857d22f142b251f17808dfe41733512d9cded86"
 
 RUN wget "http://nginx.org/download/${NGINX_PKG}" && \
     echo "${NGINX_SHA} *${NGINX_PKG}" | sha256sum -c - && \
@@ -48,7 +48,7 @@ RUN cd nginx && \
     make modules
 
 # Production container starts here
-FROM zappi/nginx:1.25.2
+FROM zappi/nginx:1.25.3
 
 # Copy compiled module
 COPY --from=builder /usr/src/nginx/objs/*_module.so /etc/nginx/modules/
