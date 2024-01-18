@@ -9,8 +9,8 @@
   * Add `X-Proxy-Backend-Response-Time`.
   * Remove `X-Proxy-Backend-Total-Time`.
 * Update logging fields:
+  * Add `http_x_proxy_backend_response_time`.
   * Remove `http_x_proxy_backend_total_time`.
-  * Remove `http_x_proxy_backend_response_time`.
 
 ## 1.25.2-3
 
