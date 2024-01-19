@@ -39,6 +39,22 @@ RUN cd nginx && \
 # Production container starts here
 FROM zappi/nginx:1.25.3
 
+USER root
+
+# Set up official Nginx repository
+RUN apt-get update -y && \
+    apt-get install --no-install-recommends -y \
+        ca-certificates \
+        gnupg2 \
+        wget && \
+    rm -rf /var/lib/apt/lists/* /tmp/* && \
+    wget -q -O - https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /etc/apt/keyrings/nginx.gpg && \
+    echo "deb [signed-by=/etc/apt/keyrings/nginx.gpg] http://nginx.org/packages/mainline/debian bookworm nginx" | tee /etc/apt/sources.list.d/nginx.list && \
+    apt-get purge --auto-remove -y \
+        ca-certificates \
+        gnupg2 \
+        wget
+
 # Copy compiled module
 COPY --from=builder /usr/src/nginx/objs/*_module.so /etc/nginx/modules/
 
