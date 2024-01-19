@@ -1,0 +1,19 @@
+exporters:
+  debug:
+  otlp:
+    endpoint: jaeger:4317
+    tls:
+      insecure: true
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+service:
+  pipelines:
+    traces:
+      exporters:
+        - debug
+        - otlp
+      receivers:
+        - otlp
