@@ -36,6 +36,23 @@ server {
 }
 ```
 
+### Tracing
+
+Add observability by enabling trace propagation and sending telemetry data to an
+OTel collector:
+
+```nginx
+otel_trace          on;
+otel_service_name   example_service:nginx;
+otel_trace_context  propagate;
+otel_exporter {
+    endpoint        otel-collector:4317;
+    interval        5s;
+    batch_size      512;
+    batch_count     4;
+}
+```
+
 ## Further customisation
 
 Since you're defining a standard `server` block, you can configure it however you like over and above just header manipulation. For example, you can add a custom `location`:
