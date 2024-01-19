@@ -55,6 +55,12 @@ RUN apt-get update -y && \
         gnupg2 \
         wget
 
+# Module: OpenTelemetry (OTel)
+RUN apt-get update -y && \
+    apt-get install --no-install-recommends -y \
+      nginx-module-otel && \
+    rm -rf /var/lib/apt/lists/* /tmp/*
+
 # Copy compiled module
 COPY --from=builder /usr/src/nginx/objs/*_module.so /etc/nginx/modules/
 
