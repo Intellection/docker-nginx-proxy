@@ -16,6 +16,20 @@ services:
       - app
     networks:
       - local
+  jaeger:
+    image: jaegertracing/all-in-one:1.53
+    ports:
+      - "16686:16686"
+    networks:
+      - local
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.92.0
+    command:
+      - "--config=/etc/otel-collector/config.yml"
+    volumes:
+      - "./example/otel-collector-config.yml:/etc/otel-collector/config.yml"
+    networks:
+      - local
 
 networks:
   local:
