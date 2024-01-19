@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.25.3-1
+
+* Add OpenTelemetry (OTel) module i.e. `nginx-module-otel`.
+* Update observability headers:
+  * Add `X-Trace-ID`.
+* Update logging fields:
+  * Add `otel_trace_id`.
+
 ## 1.25.3
 
 * Use `zappi/nginx:1.25.3` as the docker base image.
