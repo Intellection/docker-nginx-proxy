@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.25.4
+
+* Add `X-Request-Start` header set to current time with millisecond precision.
+* Update base image to `zappi/nginx:1.25.4`.
+
 ## 1.25.3-1
 
 * Add OpenTelemetry (OTel) module i.e. `nginx-module-otel`.
