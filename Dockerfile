@@ -1,4 +1,4 @@
-FROM zappi/nginx:1.25.3 as builder
+FROM zappi/nginx:1.25.4 as builder
 
 USER root
 
@@ -16,9 +16,9 @@ RUN apt-get update -y && \
 WORKDIR /usr/src/
 
 # Download nginx source
-ARG NGINX_VERSION="1.25.3"
+ARG NGINX_VERSION="1.25.4"
 ARG NGINX_PKG="nginx-${NGINX_VERSION}.tar.gz"
-ARG NGINX_SHA="64c5b975ca287939e828303fa857d22f142b251f17808dfe41733512d9cded86"
+ARG NGINX_SHA="760729901acbaa517996e681ee6ea259032985e37c2768beef80df3a877deed9"
 RUN wget "http://nginx.org/download/${NGINX_PKG}" && \
     echo "${NGINX_SHA} *${NGINX_PKG}" | sha256sum -c - && \
     tar --no-same-owner -xzf ${NGINX_PKG} --one-top-level=nginx --strip-components=1
@@ -37,7 +37,7 @@ RUN cd nginx && \
     make modules
 
 # Production container starts here
-FROM zappi/nginx:1.25.3
+FROM zappi/nginx:1.25.4
 
 USER root
 
