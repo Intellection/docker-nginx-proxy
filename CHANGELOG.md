@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.27.1
+
+* Update base image to `zappi/nginx:1.27.1`.
+
 ## 1.25.4
 
 * Add `X-Request-Start` header set to current time with millisecond precision.
