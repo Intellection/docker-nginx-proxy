@@ -1,4 +1,4 @@
-FROM zappi/nginx:1.27.1 as builder
+FROM zappi/nginx:1.27.1 AS builder
 
 USER root
 
