@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.27.1-2
+
+* Upgrade `headers-more-nginx-module` to `v0.38`.
+
 ## 1.27.1-1
 
 * Allow `X-Original-Forwaded-*` headers to take priority when setting `X-Forwarded-*` headers.
