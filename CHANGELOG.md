@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.27.1-1
+
+* Allow `X-Original-Forwaded-*` headers to take priority when setting `X-Forwarded-*` headers.
+
 ## 1.27.1
 
 * Update base image to `zappi/nginx:1.27.1`.
