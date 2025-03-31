@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.27.4
+
+* Update base image to `zappi/nginx:1.27.4`.
+* Fix pid file perimssion denied error.
+
 ## 1.27.1-2
 
 * Upgrade `headers-more-nginx-module` to `v0.38`.
