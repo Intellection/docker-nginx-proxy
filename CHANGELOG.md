@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.31.3
+
+* Update base image to `zappi/nginx:1.31.3` (Debian Trixie).
+* Upgrade `headers-more-nginx-module` to `v0.40`.
+* Build the `headers-more` module against PCRE2, as Trixie no longer
+  ships the legacy `libpcre3` packages.
+
 ## 1.27.4
 
 * Update base image to `zappi/nginx:1.27.4`.
