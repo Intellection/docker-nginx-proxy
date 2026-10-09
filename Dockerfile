@@ -56,9 +56,10 @@ RUN apt-get update -y && \
         wget
 
 # Module: OpenTelemetry (OTel)
+ARG NGINX_OTEL_VERSION="0.1.2-1~trixie"
 RUN apt-get update -y && \
     apt-get install --no-install-recommends -y \
-      nginx-module-otel && \
+      "nginx-module-otel=${NGINX_VERSION}+${NGINX_OTEL_VERSION}" && \
     rm -rf /var/lib/apt/lists/* /tmp/*
 
 # Copy compiled module
