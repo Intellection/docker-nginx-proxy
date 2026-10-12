@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.31.3-1
+
+* Return `X-Trace-ID` on every response, including `202` and `4xx`/`5xx`.
+* Pin `nginx-module-otel` to the base image's nginx version.
+
 ## 1.31.3
 
 * Update base image to `zappi/nginx:1.31.3` (Debian Trixie).
