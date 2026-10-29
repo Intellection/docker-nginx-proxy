@@ -4,6 +4,7 @@
 
 * Update base image to `zappi/nginx:1.31.8`, picking up the patched
   Brotli for CVE-2026-111497.
+* Upgrade `headers-more-nginx-module` to `v0.41`.
 
 ## 1.31.3-1
 
