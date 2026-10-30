@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.31.8-1
+
+* Update base image to `zappi/nginx:1.31.8-1`.
+* Remove `curl`.
+
 ## 1.31.8
 
 * Update base image to `zappi/nginx:1.31.8`.
