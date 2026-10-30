@@ -1,4 +1,4 @@
-FROM zappi/nginx:1.31.8 AS builder
+FROM zappi/nginx:1.31.8-1 AS builder
 
 USER root
 
@@ -37,7 +37,7 @@ RUN cd nginx && \
     make modules
 
 # Production container starts here
-FROM zappi/nginx:1.31.8
+FROM zappi/nginx:1.31.8-1
 
 USER root
 
