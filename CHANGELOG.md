@@ -3,7 +3,9 @@
 ## 1.31.8-1
 
 * Update base image to `zappi/nginx:1.31.8-1`.
-* Remove `curl`.
+  * Remove the `acme`, `geoip`, `image-filter`, `njs` and `xslt` dynamic
+    modules.
+  * Remove `curl`.
 
 ## 1.31.8
 
