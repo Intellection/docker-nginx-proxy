@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.31.9
+
+* Update base image to `zappi/nginx:1.31.9`.
+
 ## 1.31.8-1
 
 * Update base image to `zappi/nginx:1.31.8-1`.
